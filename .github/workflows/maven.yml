@@ -41,14 +41,14 @@ jobs:
         ls -lrth target/
         
     - name:  Execute Jar 
-      run: mvn exec:java
+      run: java -cp target/mavenleap-1.0-SNAPSHOT.jar com.sudharsanan.leap.App
   
         
     - name: Uplaod artifact in workflow
       uses: actions/upload-artifact@v3
       with:
           name: maven-demo-artifact
-          path: target/MavenDemo.jar
+          path: target/mavenleap-1.0-SNAPSHOT.jar
       
 
   
